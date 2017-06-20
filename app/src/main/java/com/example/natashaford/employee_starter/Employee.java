@@ -1,4 +1,4 @@
-package com.example;
+package com.example.natashaford.employee_starter;
 
 public class Employee {
 
@@ -22,8 +22,8 @@ public class Employee {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String setName(String name) {
+        return this.name = name;
     }
 
     public double getSalary() {
@@ -34,8 +34,11 @@ public class Employee {
         return ssn;
     }
 
-    public double raiseSalary(amount){
-        salary += amount;
+    public double raiseSalary(double amount){
+        if (amount < 0)
+            return 0;
+        else
+            return salary += amount;
     }
 
 }
